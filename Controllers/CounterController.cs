@@ -74,7 +74,7 @@ namespace CounterApi.Controllers
         [Route("Stream")]
         public async Task StreamCounter(CancellationToken cancellationToken)
         {
-            _logger.LogInformation($"Start counter streaming.");
+            _logger.LogInformation("Start counter streaming.");
 
             Response.StatusCode = 200;
             Response.Headers.Add("Content-Type", "text/event-stream");
@@ -86,7 +86,7 @@ namespace CounterApi.Controllers
             }
 
             _counter.CounterUpdated -= StreamValue;
-            _logger.LogInformation($"Stop counter streaming.");
+            _logger.LogInformation("Stop counter streaming.");
 
             async void StreamValue(object sender, int value)
             {
