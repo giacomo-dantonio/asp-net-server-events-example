@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Counter Stream</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <div id="app-container">
+        <div id="counter"></div>
+        <div id="buttons">
+            <form onsubmit="setCounter(); return false;">
+                <input type="text" id="set-value" type="submit"/>
+            </form>
+            <button onclick="startCounter();">▶️</button>
+            <button onclick="stopCounter();">⏸️</button>
+        </div>
+    </div>
+
+    <script src="js/stream.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        readStream();
+    </script>
+</body>
+</html>
